@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Messages</title>
+  <script src="https://kit.fontawesome.com/f5526fe609.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" type="image/png" href="assets/images/messages-icon180.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- iOS-specific -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#000">
+  <meta name="apple-mobile-web-app-title" content="Messages">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/images/messages-icon180.png" />
+
+</head>
+<body class="bg-black text-white max-w-screen max-h-screen">
+
+  <div class="max-w-sm mx-auto flex flex-col">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-10 flex items-start justify-between px-4 pt-2 pb-0 bg-gradient-to-b from-black">
+      <button class="w-12 h-12 backdrop-blur-md bg-white/10 border border-white/10 shadow-md hover:bg-white/20 hover:shadow-lg transition rounded-full flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <div class="flex flex-col items-center -mt-[10px]">
+        <div class="relative w-[72px] h-[72px] rounded-full overflow-hidden">
+          <img src="assets/images/icon.png" alt="Avatar" class="w-full h-full object-cover" />
+        </div>
+        <div class="flex items-center text-lg font-semibold px-3 py-1 rounded-full -mt-2 -z-10 backdrop-blur-md bg-white/10 border border-white/10 shadow-md ">
+          <span class="text-white text-sm">JSP_bilet <i class="fa-solid fa-chevron-right text-xs text-[#65646B] font-extrabold"></i></span>
+        </div>
+      </div>
+
+      <div class="w-12"></div>
+    </header>
+
+    <!-- Messages container -->
+<main id="messages" class="pt-4 px-4 space-y-4 mb-[120px] text-[16.2px] flex-1 h-[calc(100vh-160px)]"></main>
+
+    <!-- Footer with + button -->
+    <footer class="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-sm p-4 pt-0 bg-gradient-to-t from-black">
+      <div class="flex items-end space-x-3">
+
+        <button id="addMessageBtn" class="w-10 h-10  rounded-full flex items-center justify-center flex-shrink-0 backdrop-blur-md bg-white/10 shadow-md hover:bg-white/20 hover:shadow-lg transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+          </svg>
+        </button>
+
+        <div class="flex flex-col w-full rounded-2xl px-3 backdrop-blur-md bg-white/10 border border-gray-500/20 shadow-md">
+          <div class="p-2 pl-0 w-full text-md border-b border-gray-600" role="textbox" tabindex="0">
+            <span class="text-[#5D5D5D]">Subject</span>
+          </div>
+          <div class="flex justify-between items-center p-2 pl-0 w-full">
+            <div class="text-md w-full" role="textbox" tabindex="0">
+              <span class="text-[#5D5D5D]">Text Message • SMS</span>
+            </div>
+            <i class="fa-solid fa-microphone ml-2 text-lg text-[#5D5D5D]"></i>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
